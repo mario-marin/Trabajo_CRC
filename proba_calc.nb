@@ -1,0 +1,276 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10831,        268]
+NotebookOptionsPosition[     10051,        242]
+NotebookOutlinePosition[     10395,        257]
+CellTagsIndexPosition[     10352,        254]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Calculadora", " ", "de", " ", "posibles", " ", "CRC", " ", "de", " ", 
+     "n", " ", "bits"}], ",", " ", 
+    RowBox[{
+    "probabilidad", " ", "de", " ", "error", " ", "y", " ", "probabilidad", 
+     " ", "de", " ", "no", " ", "error"}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"nbits", " ", "=", " ", "32"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"values", "[", "n_", "]"}], ":=", " ", 
+     SuperscriptBox["2", "n"]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"error", "[", "n_", "]"}], ":=", " ", 
+    FractionBox["1", 
+     RowBox[{"values", "[", "n", "]"}]]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"correct", "[", "n_", "]"}], ":=", " ", 
+    RowBox[{"1", "-", " ", 
+     RowBox[{"error", "[", "n", "]"}]}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"N", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"n", ",", " ", 
+           RowBox[{"values", "[", "n", "]"}], ",", " ", 
+           RowBox[{"error", "[", "n", "]"}], ",", " ", 
+           RowBox[{"correct", "[", "n", "]"}]}], "}"}], ",", " ", "20"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Plot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"error", "[", "m", "]"}], ",", " ", 
+           RowBox[{"correct", "[", "m", "]"}]}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"m", ",", " ", "0", ",", " ", "n"}], "}"}], ",", " ", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", " ", "nbits"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", " ", "1"}], "}"}]}], "}"}]}], " ", ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", " ", 
+         RowBox[{"PlotLegends", "->", "\"\<Expressions\>\""}], ",", " ", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<n\>\"", ",", " ", "\"\<P(n)\>\""}], "}"}]}]}], 
+        "]"}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", " ", "1", ",", " ", "nbits", ",", " ", "1"}], "}"}], 
+     ",", " ", 
+     RowBox[{"FrameLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Notaci\[OAcute]n: \\n \\n (n, \!\(\*SuperscriptBox[\(2\), \
+\(n\)]\), error, correct) \\n \\n n: N\[Degree] de bits CRC, \\n \
+\!\(\*SuperscriptBox[\(2\), \(n\)]\): posibles combinaciones de CRC, \\n \
+error: Probabilidad de Error, \\n correct: Probabilidad de no error\>\"", ",",
+         " ", "\"\<\>\"", ",", " ", 
+        "\"\<Calculadora de Probabilidades de error y no error\>\"", ",", 
+        " ", "\"\<\>\""}], "}"}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBmIQndJsnyby+bUjk1dRJoi+1HEoF0QzTJ5YAKKdDNJL
+QXRFcVAjiD7SJtQKopc8WdMDotO2rJkEoo9+jJ0Jov893DUXRNsuUlgBol1t
+C3eD6GnhDedA9MPakpsgOuCD20uwfSvOvgfR205HfAbRHgcb/oLom4y1zKJA
+unmlLTuInhCaD6afKJbwgujQnHfSIFrmwSRtEO0Rpq4Don/rzU4C0RZaa1NA
+9K6C6b0g+g+n20wQXTbn5FcJIF3AO/8HiH6mdYZREuT/LgEOEG2W3MMLorvz
+ZomD6NOd9jIgOjDcVwFEAwBeiZ5c
+  "],ExpressionUUID->"c02e0330-8dc6-4009-b588-160ec3145797"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 32, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 32, 1}}, Typeset`size$$ = {
+    733., {399., 14.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`n$2421$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$2421$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> {
+        N[{$CellContext`n$$, 
+          $CellContext`values[$CellContext`n$$], 
+          $CellContext`error[$CellContext`n$$], 
+          $CellContext`correct[$CellContext`n$$]}, 20], 
+        Plot[{
+          $CellContext`error[$CellContext`m], 
+          $CellContext`correct[$CellContext`m]}, {$CellContext`m, 
+          0, $CellContext`n$$}, 
+         PlotRange -> {{0, $CellContext`nbits}, {0, 1}}, ImageSize -> Large, 
+         PlotLegends -> "Expressions", AxesLabel -> {"n", "P(n)"}]}, 
+      "Specifications" :> {{$CellContext`n$$, 1, 32, 1}}, 
+      "Options" :> {
+       FrameLabel -> {
+         "Notaci\[OAcute]n: \n \n (n, \!\(\*SuperscriptBox[\(2\), \(n\)]\), \
+error, correct) \n \n n: N\[Degree] de bits CRC, \n \
+\!\(\*SuperscriptBox[\(2\), \(n\)]\): posibles combinaciones de CRC, \n \
+error: Probabilidad de Error, \n correct: Probabilidad de no error", "", 
+          "Calculadora de Probabilidades de error y no error", ""}}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{802., {328., 334.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.7513319969815865`*^9, 3.7513320293669186`*^9}, {
+   3.751332077816753*^9, 3.751332098793932*^9}, 
+   3.751332129614131*^9},ExpressionUUID->"3a8fe2fc-0084-4ff4-b014-\
+22078fa0aa47"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"error", "[", "m", "]"}], ",", " ", 
+       RowBox[{"correct", "[", "m", "]"}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"m", ",", " ", "0", ",", " ", "n"}], "}"}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", " ", "32"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", " ", "1"}], "}"}]}], "}"}]}], ",", " ", 
+     RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", " ", 
+     RowBox[{"PlotLegends", "\[Rule]", "\"\<Expressions\>\""}]}], "]"}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "1", ",", " ", "32"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7513235502829137`*^9, 3.751323585020028*^9}, {
+  3.751324021324939*^9, 3.7513240790855827`*^9}, {3.751324374838957*^9, 
+  3.7513244131132345`*^9}, {3.751324539209079*^9, 3.7513245395501723`*^9}, {
+  3.751324704639636*^9, 3.7513247716163797`*^9}, {3.751324894168458*^9, 
+  3.7513248945268726`*^9}, {3.751331677163637*^9, 
+  3.7513317427193837`*^9}},ExpressionUUID->"d5d36971-a260-4693-abc1-\
+0df42f4604ab"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 28.200000000000003`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 32}}, Typeset`size$$ = {465., {114., 120.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$124436$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$124436$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`error[$CellContext`m], 
+         $CellContext`correct[$CellContext`m]}, {$CellContext`m, 
+         0, $CellContext`n$$}, PlotRange -> {{0, 32}, {0, 1}}, ImageSize -> 
+        Medium, PlotLegends -> "Expressions"], 
+      "Specifications" :> {{$CellContext`n$$, 1, 32}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{516., {161., 167.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.7513235585417843`*^9, 3.751323585612422*^9}, {
+   3.751324055429969*^9, 3.7513240807692823`*^9}, {3.751324391972207*^9, 
+   3.751324413493231*^9}, 3.751324539819561*^9, {3.7513247077506247`*^9, 
+   3.7513247721130705`*^9}, 3.7513248948799267`*^9, 3.751331695454804*^9, {
+   3.7513317277644696`*^9, 
+   3.75133174314029*^9}},ExpressionUUID->"d283d817-7e25-4c57-9eee-\
+c8d4084cabde"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7513243696319895`*^9, 
+  3.7513243696838293`*^9}},ExpressionUUID->"22dbb0dd-802b-4dc3-8a1f-\
+8df2e5e28b5b"]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3299, 80, 251, "Input", "ExpressionUUID" -> \
+"c02e0330-8dc6-4009-b588-160ec3145797"],
+Cell[3882, 104, 2566, 52, 712, "Output", "ExpressionUUID" -> \
+"3a8fe2fc-0084-4ff4-b014-22078fa0aa47"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6485, 161, 1236, 29, 30, "Input", "ExpressionUUID" -> \
+"d5d36971-a260-4693-abc1-0df42f4604ab"],
+Cell[7724, 192, 2152, 42, 345, "Output", "ExpressionUUID" -> \
+"d283d817-7e25-4c57-9eee-c8d4084cabde"]
+}, Open  ]],
+Cell[9891, 237, 156, 3, 30, "Input", "ExpressionUUID" -> \
+"22dbb0dd-802b-4dc3-8a1f-8df2e5e28b5b"]
+}
+]
+*)
+

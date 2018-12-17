@@ -1,0 +1,15 @@
+Trabajo TEL-211 CRC 2018-2
+
+Desarrollado por:
+ Mario Marin
+ Jose Luis Gallardo
+ Daryl Hernandez
+
+Fecha entrega: 17/12/2018
+
+Archivos:
+	- CRC.zip: Codigo fuente latex realizada en https://www.overleaf.com
+	- CRC_final.pdf: Precentacion en formato PDF.
+	- proba_calc.nb: Archivo notebook de Mathematica.
+	- crc32: Codigo python.
+	- Grafico_probabilidades_codigos hamming.ggb: Archivo Geogebra
